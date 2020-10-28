@@ -69,7 +69,7 @@ public class CursomcApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Categoria cat1 = new Categoria(null, "Inforática");
+		Categoria cat1 = new Categoria(null, "Informática");
 		Categoria cat2 = new Categoria(null, "Escritório");
 		
 		Produto p1 = new Produto(null,"Computador",2000.00);
