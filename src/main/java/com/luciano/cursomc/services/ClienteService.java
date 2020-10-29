@@ -58,7 +58,7 @@ public class ClienteService {
 			repo.deleteById(id);
 		}
 		catch(DataIntegrityViolationException e) {
-			throw new DataIntegrityException("Não é possivel deletar Clientes que possui produtos");
+			throw new DataIntegrityException("Não é possivel deletar Clientes com entidades relacionadas");
 		}
 	}
 	
