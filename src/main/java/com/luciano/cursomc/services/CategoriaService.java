@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.luciano.cursomc.domain.Categoria;
+import com.luciano.cursomc.dto.CategoriaDTO;
 import com.luciano.cursomc.repositories.CategoriaRepository;
 import com.luciano.cursomc.services.exception.DataIntegrityException;
 import com.luciano.cursomc.services.exception.ObjectNotFoundException;
@@ -56,5 +57,9 @@ public class CategoriaService {
 		catch(DataIntegrityViolationException e) {
 			throw new DataIntegrityException("Não é possivel deletar Categorias que possui produtos");
 		}
+	}
+	
+	public Categoria fromDTO (CategoriaDTO objDto) {
+		return new Categoria (objDto.getId(),objDto.getNome());
 	}
 }
